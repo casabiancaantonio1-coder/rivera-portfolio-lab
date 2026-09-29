@@ -47,9 +47,29 @@ BIL (T-bills) is downloaded as the risk-free rate, so Sharpe ratios use actual c
 
 ## Results
 
-> Run `python run_backtest.py` with real data and paste the scorecard here, along with `backtest.png`. Then write two or three sentences of your own on what you see: which strategy you would recommend to Maya and why, and whether it met the 25% limit.
+Out-of-sample period: July 2016 to September 2026. All numbers are after trading costs.
+
+| Measure | Risk parity | 70/30 benchmark |
+| --- | --- | --- |
+| Annual return | 8.3% | 9.5% |
+| Volatility | 9.7% | 12.2% |
+| Sharpe ratio | 0.65 | 0.63 |
+| Worst fall from a peak | -20.3% | -24.3% |
+
+| Market shock | Risk parity | 70/30 benchmark |
+| --- | --- | --- |
+| Q4 2018 sell-off | -7.5% | -11.5% |
+| COVID crash (2020) | -20.2% | -24.0% |
+| 2022 rate shock | -19.1% | -22.5% |
+| 2025 tariff shock | -6.6% | -11.4% |
 
 ![Backtest results](backtest.png)
+
+**My recommendation for Maya is risk parity.** It earned about 1.2% a year less than the 70/30 benchmark, but it was noticeably less bumpy and lost less in every one of the four market shocks. Most importantly, its worst fall was 20.3%, which stays inside Maya's 25% limit. The benchmark fell about 24%, uncomfortably close to the point where she said she'd give up on the plan. A strategy she actually sticks with beats a slightly better one she abandons in a crash.
+
+The Monte Carlo projection backs this up. Saving $2,200 a month with risk parity, 81% of 5,000 simulated futures reach her $1 million goal (in today's dollars) by 55, even after I cut the expected returns by 1% a year to be conservative.
+
+All four strategies followed every rule in her policy. Minimum variance held up even better during the crashes, so it would be a reasonable choice if Maya cared about smoothness above everything else. The benchmark's higher return mostly reflects a very strong decade for US stocks, which may not repeat.
 
 ## Dashboard
 
